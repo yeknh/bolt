@@ -11,8 +11,20 @@ img {
 
 .inner {
   margin: 0 auto;
-  width: 1100px;
 }
+
+@media screen and (min-width: 1200px) {
+  .inner {
+    width: 1100px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .inner {
+    width: auto;
+  }
+}
+
 
 .clearfix {
   display: block;
@@ -32,15 +44,19 @@ img {
 }
 
 .header_inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   padding: 15px;
 }
+
 
 .header_btn {
   background-color:	#74cfae;
   color: #fff;
+  line-height: 20px;
   text-decoration: none;
   font-size: 12px;
-  float: right;
   padding: 14px 12px;
   transition: 0.3s all;
 }
@@ -48,6 +64,40 @@ img {
 .header_btn:hover {
   color: #333;
   cursor: pointer;
+}
+
+.header_hamburger {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 10px;
+}
+
+.header_hamburger span {
+  background-color: #ddd;
+  border-radius: 2px;
+  display: block;
+  height: 2px;
+  margin-top: 5px;
+  width: 30px;
+}
+
+.header_hamburger span:nth-child(1) {
+  margin-top: 0px;
+}
+
+
+@media screen and (min-width:768px) {
+  .header_hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .header_btn {
+    display: none;
+  }
 }
 
 
@@ -75,10 +125,19 @@ img {
 .theme_subtitle {
   color: #c0c0c0;
   font-size: 30px;
-  font-weight: lighter;
   margin-top: 20px;
 }
 
+@media screen and (max-width: 767px) {
+  .theme_inner {
+    padding: 160px 0 130px;
+  }
+
+  .theme_text_contents {
+    font-size: 80px;
+  }
+
+}
 /* section_intro */
 .section_intro {
   background-color: #74cfae;
@@ -100,7 +159,7 @@ img {
   line-height: 30px;
   margin-left: 200px;
   text-align: center;
-  width: 60%;
+  width: 590px;
 }
 
 .h_font {
@@ -119,6 +178,49 @@ img {
   margin-top: 35px;
 }
 
+@media screen and (min-width:768px) and (max-width: 1199px) {
+  .section_intro {
+    width: auto;
+  }
+  
+  .section_intro_text_container {
+    margin: 20px auto 0;
+  }
+
+  .section_intro_img {
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .section_intro_inner {
+    display: block;
+    padding: 50px 0 25px;
+  }
+
+  .section_intro_text_container {
+    width: auto;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .section_intro_text_container {
+    margin: 20px auto 0;
+  }
+
+  .section_intro_img {
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .section_intro_inner {
+    display: block;
+    padding: 50px 0 25px;
+  }
+
+  .section_intro_text_container {
+    width: 100vw;
+  }
+}
 
 /* article */
 .article_inner {
@@ -142,16 +244,14 @@ img {
   margin-bottom: 80px;
 }
 
-.article_img {
+
+.article_img_link {
+  display: block;
   opacity: 0.7;
   transition: 0.3s all;
 }
 
-.article_img_link {
-  display: block;
-}
-
-.article_img_link:hover .article_img {
+.article_img_link:hover {
   opacity: 1;
 }
 
@@ -186,6 +286,47 @@ img {
 .articla_btn:hover {
   color: #333;
 }
+
+@media screen and (max-width:1199px) {
+  .article_list_container {
+    margin-bottom: 80px;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .article_list {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .article_list:nth-child(3n) {
+    margin-bottom: 80px;
+  }
+
+
+  .article_text {
+    display: block;
+    margin: 0 auto;
+    
+  }
+
+  .articla_btn {
+    display: inline-block;
+    margin: 40px auto 0;
+  }
+  
+
+}
+
+@media screen and (max-width:767px) {
+  .article_text {
+    width: 100vw;
+  }
+}
+
+
+
 
 /* section_skill */
 .section_skill {
@@ -224,6 +365,20 @@ img {
   text-align: center;
 }
 
+@media screen and (max-width:1199px) {
+  
+  .section_skill_contents {
+    display: block;
+    margin-left: 0;
+    margin-top: 88px;
+  }
+  
+  .section_skill_contents:first-child {
+    margin-top: 0;
+  }
+  
+}
+
 
 /* nav */
 .fa-style {
@@ -253,6 +408,16 @@ img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 767px) {
+  .nav_inner {
+    padding: 50px 0;
+  }
+
+  .nav_list_container {
+    display: block;
+    text-align: center;
+  }
+}
 
 /* footer */
 .footer {
@@ -263,7 +428,14 @@ img {
   padding: 20px 0 25px;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer_inner {
+    padding: 20px 15px 25px;
+  }
+}
+
 .footer_text {
   color: #fff;
   text-align: right;
 }
+
