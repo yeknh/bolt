@@ -180,9 +180,6 @@ img {
 }
 
 @media screen and (min-width:768px) and (max-width: 1199px) {
-  .section_intro {
-    width: 97%;
-  }
   
   .section_intro_text_container {
     margin: 20px auto 0;
