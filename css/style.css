@@ -415,7 +415,10 @@ img {
 
   .nav_list_container {
     display: block;
-    text-align: center;
+  }
+
+  .nav_link {
+    width: auto;
   }
 }
 
